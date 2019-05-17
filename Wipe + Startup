@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SERVER_IP=ip goes here
+PASSWORD=password
+
+ /home/swade/.steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/swade/rustserver +app_update 258550 +quit
+
+nohup ./RustDedicated  -batchmode  -nographics  -server.ip $SERVER_IP  -server.port 28015  -rcon.ip $SERVER_IP  -rcon.port 28016  -rcon.password “$PASSWORD”  -server.maxplayers 75   -server.hostname “Swade’s Playground”   -server.identity “playground”   -server.level "Procedural Map"   -server.seed 34537   -server.worldsize 3000  -server.saveinterval 300   -server.globalchat true -server.description "Welcome to Swade's Playground! This is a brand new server as of 1/11/2018 and is trying to get off the ground! This server is not modded in any way, with bi-weekly wipes and zero admin abuse! We take cheating very seriously and are not afraid to ban any player that cheats. Currently we have a 4 person team limit but this could change in the future if enough people ask. We thank you for playing on our server and if you have any questions or just want to talk, hit the website button to take you to our Discord, but most importantly, have fun! Last Map Wipe: 1/25/18 | Last Blueprint Wipe: 1/11/18 | Next Map Wipe: 2/8/18 | Next Blueprint Wipe: 2/8/18"-server.headerimage "https://i.imgur.com/cdTBsO8.png" -server.url "https://discord.gg/c6ruxah" &
